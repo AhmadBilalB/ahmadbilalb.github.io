@@ -361,6 +361,21 @@ p { color: var(--ink-soft); }
 }
 
 /* ---------- Projects ---------- */
+.proj-subhead {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
+  margin: 44px 0 16px;
+}
+.proj-subhead:first-child { margin-top: 0; }
+.proj-context {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin: 2px 0 10px;
+}
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -491,6 +506,13 @@ p { color: var(--ink-soft); }
 .avail-list li:first-child { border-top: none; }
 @media (max-width: 700px) {
   .contact-grid { grid-template-columns: 1fr; }
+}
+
+.r-note {
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  font-style: italic;
+  margin: 4px 0 10px;
 }
 
 footer {
