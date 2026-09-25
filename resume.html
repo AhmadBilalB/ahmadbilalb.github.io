@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmad Bilal — Resume</title>
+<meta name="description" content="Resume — Ahmad Bilal, Senior Backend Engineer specializing in Java, Spring Boot, and distributed systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .resume-page { padding: 56px 0 100px; }
+  .resume-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .resume-head h1 { font-size: 32px; margin: 0 0 6px; }
+  .resume-head .role { color: var(--ink-faint); font-family: var(--mono); font-size: 14px; }
+  .resume-actions { display: flex; gap: 10px; }
+  .r-section { margin-bottom: 34px; }
+  .r-section h2 {
+    font-family: var(--mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin: 0 0 18px;
+  }
+  .r-role { margin-bottom: 22px; }
+  .r-role-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .r-role h3 { font-size: 17px; margin: 0; }
+  .r-role .org { color: var(--ink-faint); font-size: 14px; margin: 2px 0 8px; }
+  .r-role .when { font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint); white-space: nowrap; }
+  .r-role ul { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--ink-soft); }
+  .r-role li + li { margin-top: 5px; }
+  .r-skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; font-size: 14.5px; }
+  .r-skills div span.k { color: var(--ink-faint); font-family: var(--mono); font-size: 12.5px; display: block; margin-bottom: 3px; }
+  @media (max-width: 600px) { .r-skills { grid-template-columns: 1fr; } }
+
+  @media print {
+    .site-nav, .resume-actions, footer { display: none !important; }
+    body { background: #fff; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="nav-mark" href="index.html">ahmad<span>.</span>bilal</a>
+    <ul class="nav-links" style="display:flex;position:static;height:auto;padding:0;border:none;">
+      <li><a href="index.html">← Back to portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap resume-page">
+  <div class="resume-head">
+    <div>
+      <h1>Ahmad Bilal</h1>
+      <p class="role">Senior Backend Engineer — Java / Spring Boot / Distributed Systems</p>
+    </div>
+    <div class="resume-actions">
+      <a class="btn btn-primary" href="javascript:window.print()">Download / print PDF</a>
+      <a class="btn" href="mailto:ahmad.bilal.5794@gmail.com">Email</a>
+    </div>
+  </div>
+
+  <div class="r-section">
+    <h2>Summary</h2>
+    <p class="prose">Senior Backend Engineer with 7+ years of experience building reliable, scalable systems in Java and Spring Boot — microservices, distributed systems, and event-driven architecture across SaaS, enterprise, and financial-workflow products. Backend-first, with supporting full-stack experience in JavaScript/Vue.</p>
+  </div>
+
+  <div class="r-section">
+    <h2>Experience</h2>
+
+    <div class="r-role">
+      <div class="r-role-head">
+        <h3>Software Engineer — Overjet</h3>
+        <span class="when">Current</span>
+      </div>
+      <p class="org">Kept general — confidential role, no internal systems referenced here.</p>
+    </div>
+
+    <div class="r-role">
+      <div class="r-role-head">
+        <h3>Senior Software Engineer — Stewart Title</h3>
+        <span class="when">Previous</span>
+      </div>
+      <ul>
+        <li>Early developer on a new enterprise title/settlement platform; owned the NCS domain end-to-end.</li>
+        <li>Cross-functional collaboration on requirements, architecture/design, and code review.</li>
+        <li>Built Spring Boot microservices; integrated third-party APIs.</li>
+        <li>Led legacy JSF modernization using a Strangler Fig approach.</li>
+      </ul>
+    </div>
+
+    <div class="r-role">
+      <div class="r-role-head">
+        <h3>Full Stack Java Engineer — Kendis / Loxvo</h3>
+        <span class="when">Previous</span>
+      </div>
+      <ul>
+        <li>Enterprise SaaS used across 90+ countries. Java/Spring backend, Vue/Vuex frontend, MongoDB, AWS.</li>
+        <li>REST APIs and integrations; Agile/SAFe delivery with technical leadership responsibilities.</li>
+        <li>Contributed to ~30% dashboard engagement increase, ~15% performance improvement, ~30% reduction in critical bugs.</li>
+      </ul>
+    </div>
+
+    <div class="r-role">
+      <div class="r-role-head">
+        <h3>GP Whitelabel — Personal / independent project</h3>
+        <span class="when">Independent</span>
+      </div>
+      <ul>
+        <li>Less than one year of direct exposure to fintech-adjacent engineering (not payment-provider integration expertise).</li>
+        <li>Financial workflows: transaction processing, balance management, multi-currency, compliance-related workflows, reporting.</li>
+        <li>Java, Spring Boot, PostgreSQL, Kafka, Redis, Docker.</li>
+      </ul>
+    </div>
+
+    <div class="r-role">
+      <div class="r-role-head">
+        <h3>Software Engineer — Intuitive Solutions</h3>
+        <span class="when">Earlier</span>
+      </div>
+      <ul>
+        <li>NGO donor platform; applied K-means clustering for donor segmentation (~40% accuracy improvement).</li>
+        <li>Product work that reduced manual workload by ~50%.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="r-section">
+    <h2>Skills</h2>
+    <div class="r-skills">
+      <div><span class="k">Backend</span>Java 8–21, Spring Boot, Spring Cloud, Spring Security, JPA/Hibernate, REST APIs</div>
+      <div><span class="k">Architecture</span>Microservices, distributed systems, event-driven architecture, DDD, API design</div>
+      <div><span class="k">Data</span>PostgreSQL, MongoDB, Redis, query optimization, caching</div>
+      <div><span class="k">Messaging / Cloud</span>Kafka, AWS, GCP, Docker, CI/CD</div>
+      <div><span class="k">Testing</span>JUnit, Mockito, REST Assured, integration testing</div>
+      <div><span class="k">Frontend (supporting)</span>JavaScript, Vue, Vuex</div>
+    </div>
+  </div>
+
+  <div class="r-section">
+    <h2>Links</h2>
+    <p class="prose">
+      GitHub: <a href="https://github.com/AhmadBilalB" target="_blank" rel="noopener">github.com/AhmadBilalB</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/ahmad-bilal-bdr/" target="_blank" rel="noopener">linkedin.com/in/ahmad-bilal-bdr</a><br>
+      Email: <a href="mailto:ahmad.bilal.5794@gmail.com">ahmad.bilal.5794@gmail.com</a>
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:10px;">
+    <span>© 2026 Ahmad Bilal</span>
+    <a href="index.html">← Back to portfolio</a>
+  </div>
+</footer>
+
+</body>
+</html>
