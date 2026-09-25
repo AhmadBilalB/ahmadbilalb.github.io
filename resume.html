@@ -23,6 +23,7 @@
   }
   .resume-head h1 { font-size: 32px; margin: 0 0 6px; }
   .resume-head .role { color: var(--ink-faint); font-family: var(--mono); font-size: 14px; }
+  .resume-head .loc { color: var(--ink-faint); font-size: 13.5px; margin-top: 6px; }
   .resume-actions { display: flex; gap: 10px; }
   .r-section { margin-bottom: 34px; }
   .r-section h2 {
@@ -44,7 +45,11 @@
   .r-role li + li { margin-top: 5px; }
   .r-skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 24px; font-size: 14.5px; }
   .r-skills div span.k { color: var(--ink-faint); font-family: var(--mono); font-size: 12.5px; display: block; margin-bottom: 3px; }
-  @media (max-width: 600px) { .r-skills { grid-template-columns: 1fr; } }
+  .r-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 600px) {
+    .r-skills { grid-template-columns: 1fr; }
+    .r-two-col { grid-template-columns: 1fr; gap: 34px; }
+  }
 
   @media print {
     .site-nav, .resume-actions, footer { display: none !important; }
@@ -69,6 +74,7 @@
     <div>
       <h1>Ahmad Bilal</h1>
       <p class="role">Senior Backend Engineer — Java / Spring Boot / Distributed Systems</p>
+      <p class="loc">Lahore, Pakistan — open to remote and relocation</p>
     </div>
     <div class="resume-actions">
       <a class="btn btn-primary" href="javascript:window.print()">Download / print PDF</a>
@@ -78,7 +84,7 @@
 
   <div class="r-section">
     <h2>Summary</h2>
-    <p class="prose">Senior Backend Engineer with 7+ years of experience building reliable, scalable systems in Java and Spring Boot — microservices, distributed systems, and event-driven architecture across SaaS, enterprise, and financial-workflow products. Backend-first, with supporting full-stack experience in JavaScript/Vue.</p>
+    <p class="prose">Senior Backend Engineer with 8+ years of experience building reliable, scalable systems in Java and Spring Boot — microservices, distributed systems, and third-party integrations across SaaS, insurance, and enterprise platforms. Backend-first, with supporting full-stack experience in JavaScript.</p>
   </div>
 
   <div class="r-section">
@@ -86,57 +92,66 @@
 
     <div class="r-role">
       <div class="r-role-head">
-        <h3>Software Engineer — Overjet</h3>
-        <span class="when">Current</span>
+        <h3>Senior Software Engineer — Overjet</h3>
+        <span class="when">Jan 2026 – Present</span>
       </div>
-      <p class="org">Kept general — confidential role, no internal systems referenced here.</p>
+      <p class="org">Boston, MA (Remote)</p>
+      <ul>
+        <li>Backend systems on the Revenue Cycle Management team — insurance verification, pre-treatment cost estimates, and integrations with dental practice-management software.</li>
+        <li>Built a third-party benefits/eligibility integration from scratch; built a transformation layer mapping normalized data onto varied practice-management schemas.</li>
+        <li>Core contributor to the pre-treatment cost estimate engine (coverage tiers, deductibles, coordination of benefits). Own REST APIs across the workflow with TDD-first coverage.</li>
+      </ul>
     </div>
 
     <div class="r-role">
       <div class="r-role-head">
         <h3>Senior Software Engineer — Stewart Title</h3>
-        <span class="when">Previous</span>
+        <span class="when">Jan 2025 – Dec 2025</span>
       </div>
+      <p class="org">Houston, TX (Remote)</p>
       <ul>
-        <li>Early developer on a new enterprise title/settlement platform; owned the NCS domain end-to-end.</li>
-        <li>Cross-functional collaboration on requirements, architecture/design, and code review.</li>
-        <li>Built Spring Boot microservices; integrated third-party APIs.</li>
-        <li>Led legacy JSF modernization using a Strangler Fig approach.</li>
+        <li>Owned the NCS backend domain on STEPS, a cloud-native title and settlement platform, end-to-end.</li>
+        <li>Rewrote core legacy JSF components as Spring Boot microservices, improving availability during peak transaction periods.</li>
+        <li>Comprehensive JUnit/integration test coverage and structured code review on every service.</li>
       </ul>
     </div>
 
     <div class="r-role">
       <div class="r-role-head">
-        <h3>Full Stack Java Engineer — Kendis / Loxvo</h3>
-        <span class="when">Previous</span>
+        <h3>Senior Software Engineer — Kendis</h3>
+        <span class="when">Feb 2023 – Jan 2025</span>
       </div>
+      <p class="org">Helsinki, Finland (Remote)</p>
       <ul>
-        <li>Enterprise SaaS used across 90+ countries. Java/Spring backend, Vue/Vuex frontend, MongoDB, AWS.</li>
-        <li>REST APIs and integrations; Agile/SAFe delivery with technical leadership responsibilities.</li>
-        <li>Contributed to ~30% dashboard engagement increase, ~15% performance improvement, ~30% reduction in critical bugs.</li>
+        <li>Designed and delivered 8 production microservices for a client fintech platform — money transfer, multi-currency processing, KYC/AML onboarding, approval routing.</li>
+        <li>Used Kafka and Spring WebFlux to decouple async payment processing; built the compliance and onboarding layer.</li>
+        <li>PostgreSQL query analysis, index design, connection pool tuning, and Redis caching against performance SLAs.</li>
+        <li>Mentored two junior engineers through code review and design discussions.</li>
       </ul>
     </div>
 
     <div class="r-role">
       <div class="r-role-head">
-        <h3>GP Whitelabel — Personal / independent project</h3>
-        <span class="when">Independent</span>
+        <h3>Software Engineer — Kendis</h3>
+        <span class="when">Feb 2020 – Feb 2023</span>
       </div>
+      <p class="org">Helsinki, Finland (Remote)</p>
       <ul>
-        <li>Less than one year of direct exposure to fintech-adjacent engineering (not payment-provider integration expertise).</li>
-        <li>Financial workflows: transaction processing, balance management, multi-currency, compliance-related workflows, reporting.</li>
-        <li>Java, Spring Boot, PostgreSQL, Kafka, Redis, Docker.</li>
+        <li>Enterprise agile-scaling SaaS used across 90+ countries (incl. BMW, Lufthansa). Led backend feature work in a team of 6.</li>
+        <li>Profiled and delivered a consistent 15% performance improvement (N+1 fixes, MongoDB batch read restructuring).</li>
+        <li>Built 100+ REST APIs, including a real-time Jira/TFS integration; cut API call volume 30% via client-side caching.</li>
       </ul>
     </div>
 
     <div class="r-role">
       <div class="r-role-head">
         <h3>Software Engineer — Intuitive Solutions</h3>
-        <span class="when">Earlier</span>
+        <span class="when">Mar 2018 – Feb 2020</span>
       </div>
+      <p class="org">Florida, USA (Remote)</p>
       <ul>
-        <li>NGO donor platform; applied K-means clustering for donor segmentation (~40% accuracy improvement).</li>
-        <li>Product work that reduced manual workload by ~50%.</li>
+        <li>Backend APIs and microservices for a donor management platform (M5) serving multinational NGOs; automation improved decision turnaround ~50%.</li>
+        <li>Built a K-means clustering model in Python for donor segmentation, improving targeting accuracy ~40%.</li>
       </ul>
     </div>
   </div>
@@ -144,12 +159,30 @@
   <div class="r-section">
     <h2>Skills</h2>
     <div class="r-skills">
-      <div><span class="k">Backend</span>Java 8–21, Spring Boot, Spring Cloud, Spring Security, JPA/Hibernate, REST APIs</div>
-      <div><span class="k">Architecture</span>Microservices, distributed systems, event-driven architecture, DDD, API design</div>
-      <div><span class="k">Data</span>PostgreSQL, MongoDB, Redis, query optimization, caching</div>
-      <div><span class="k">Messaging / Cloud</span>Kafka, AWS, GCP, Docker, CI/CD</div>
-      <div><span class="k">Testing</span>JUnit, Mockito, REST Assured, integration testing</div>
-      <div><span class="k">Frontend (supporting)</span>JavaScript, Vue, Vuex</div>
+      <div><span class="k">Languages / Frameworks</span>Java 8–21, Spring Boot, Spring Cloud, Spring Security, Spring WebFlux, JPA/Hibernate, JavaScript, Python</div>
+      <div><span class="k">Architecture</span>Microservices, distributed systems, event-driven architecture, REST API design, DDD, SOLID</div>
+      <div><span class="k">Data</span>PostgreSQL, MongoDB, MySQL, Flyway, query optimization, indexing</div>
+      <div><span class="k">Messaging / Cloud</span>Kafka, Redis, WebSockets, AWS, Azure, GCP, Docker, Kubernetes, CI/CD</div>
+      <div><span class="k">Testing</span>TDD, BDD, JUnit, Mockito, REST Assured, integration/E2E testing</div>
+      <div><span class="k">Tools / Practices</span>Git, Maven, Gradle, Swagger/OpenAPI, Agile/Scrum, SAFe</div>
+    </div>
+  </div>
+
+  <div class="r-two-col">
+    <div class="r-section">
+      <h2>Education</h2>
+      <div class="r-role">
+        <div class="r-role-head">
+          <h3>BS, Computer Science</h3>
+          <span class="when">2016 – 2020</span>
+        </div>
+        <p class="org">FAST-NUCES, Lahore, Pakistan</p>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <h2>Languages</h2>
+      <p class="prose" style="font-size:14.5px;">English (C2 — Professional) · Urdu (Native) · German (A1 — learning)</p>
     </div>
   </div>
 
