@@ -38,3 +38,25 @@ if (sections.length && navAnchors.length && 'IntersectionObserver' in window) {
 
   sections.forEach((s) => observer.observe(s));
 }
+
+// Contact form: submits to Google Forms via a hidden iframe so the
+// page doesn't navigate away, and shows a confirmation message.
+const contactForm = document.getElementById('contactForm');
+const hiddenIframe = document.getElementById('hidden_iframe');
+const cfStatus = document.getElementById('cfStatus');
+
+if (contactForm && hiddenIframe && cfStatus) {
+  let submitted = false;
+
+  contactForm.addEventListener('submit', () => {
+    submitted = true;
+    cfStatus.textContent = 'Sending...';
+  });
+
+  hiddenIframe.addEventListener('load', () => {
+    if (!submitted) return; // ignore the initial blank iframe load
+    cfStatus.textContent = "Thanks, your message has been sent. I'll get back to you soon.";
+    contactForm.reset();
+    submitted = false;
+  });
+}
